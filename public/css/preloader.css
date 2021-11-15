@@ -1,0 +1,10 @@
+.preloader {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #f4f6f9 !important;
+    height: 100vh;
+    width: 100%;
+    transition: height .2s linear;
+    z-index: 9999;
+}

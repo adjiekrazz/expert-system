@@ -1,0 +1,13 @@
+.datagrid-cell {
+    font-size: 12px;
+}
+
+.datagrid-header .datagrid-cell span {
+    font-weight: bold;
+    font-size:12px;
+    color: black;
+}
+
+.datagrid-panel-fullsize {
+    width: 100% !important;
+}
