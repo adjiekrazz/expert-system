@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@example.com'
         ])->create();
 
-        $this->call(WordsAndSentencesSeeder::class);
+        $this->call(KeywordsSeeder::class);
     }
 }

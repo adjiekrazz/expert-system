@@ -15,8 +15,8 @@
             <li class="{{ request()->is('home') ? 'active' : '' }}">
                 <a href="home"><i class="fa fa-dashboard"></i> <span class="nav-label">Beranda</span></a>
             </li>
-            <li class="{{ request()->is('sentence') ? 'active' : '' }}">
-                <a href="sentence"><i class="fa fa-file-text-o"></i> <span class="nav-label">Peribahasa</span></a>
+            <li class="{{ request()->is('keyword-view') ? 'active' : '' }}">
+                <a href="keyword-view"><i class="fa fa-file-text-o"></i> <span class="nav-label">Peribahasa</span></a>
             </li>
         </ul>
     </div>

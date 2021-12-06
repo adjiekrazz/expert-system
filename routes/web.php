@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SentenceController;
+use App\Http\Controllers\KeywordController;
+use App\Http\Controllers\InspectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,15 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/auth', [AuthController::class, 'authenticate']);
 Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/inspect-view', [InspectController::class, 'index']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return redirect('/home');
     });
     Route::get('/home', [HomeController::class, 'index']);
-    Route::get('/sentence', [SentenceController::class, 'index']);
-    Route::get('/sentence/getAll', [SentenceController::class, 'getAll']);
-    Route::post('/sentence', [SentenceController::class, 'create']);
-    Route::put('/sentence/{sentence}', [SentenceController::class, 'update']);
-    Route::delete('/sentence/{sentence}', [SentenceController::class, 'delete']);
+    Route::get('/keyword-view', [KeywordController::class, 'index']);
+    Route::get('/keywords', [KeywordController::class, 'getAll']);
+    Route::post('/keywords', [KeywordController::class, 'createOrUpdate']);
 });
